@@ -9,6 +9,7 @@
 
 :root{
     --purple: hsl(257, 40%, 49%);
+    --pink: hsl(300, 69%, 71%)
 }
 
 body{
@@ -42,12 +43,18 @@ main .half-padding{
 }
 
 main button{
+    box-shadow: 2px 2px 3px 1px rgba(0, 0, 0, 0.4);
     font-weight: 400;
     width: 100%;
     height: 3rem;
     border-radius: 2rem;
     border: none;
     color: var(--purple);
+}
+
+main button:hover{
+    background-color: var(--pink);
+    color: #fff;
 }
 
 .social-media-icons{
@@ -66,4 +73,41 @@ main button{
     justify-content: center;
     align-items: center;
     border-radius: 1rem;
+}
+
+.icons-border:nth-child(2) i{
+    margin-left: 1px;
+}
+
+.icons-border:hover{
+    border-color: var(--pink);
+}
+
+.icons-border:hover i{
+    color: var(--pink);
+}
+
+@media (min-width: 1440px){
+    body{
+        background-image: url(./images/bg-desktop.svg);
+        background-size: cover;
+    }
+    
+    main{
+        height: 100;
+        gap: 2rem;
+        display: flex;
+        text-align: start;
+        justify-content: center;
+        padding: 0;
+    }
+    main img{
+        width: 50%;
+    }
+    main button{
+        width: 10rem;
+    }
+    main .social-media-icons{
+        justify-content: end;
+    }
 }
